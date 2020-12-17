@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*END OF CSS RESET*/
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: auto;
+    background-color: rgb(230, 230, 230);
+}
+
+main,
+section,
+nav {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+}
+
+section {
+    background-image: url("pictures/main.jpg");
+    height: 50em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#personal,
+#professional,
+#enterprise {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    flex-direction: column;
+    width: 25%;
+    height: 35rem;
+    border-radius: 10%;
+    background-position: center;
+    margin: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#personal {
+    background-image: url("pictures/personal.jpg");
+}
+
+#professional {
+    background-image: url("pictures/professional.jpg");
+    background-position: top;
+}
+
+#enterprise {
+    background-image: url("pictures/enterprise.jpg");
+}
+
+#personal-inner,
+#professional-inner,
+#enterprise-inner {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10%;
+}
+
+#personal-inner button,
+#professional-inner button,
+#enterprise-inner button {
+    width: 50%;
+    align-self: center;
+    border-radius: 15px;
+}
+
+section div {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+section div:nth-child(1) {
+    justify-content: flex-end;
+}
+
+section div:nth-child(2) {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#plans {
+    width: 10%;
+    height: 10%;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+#plans:hover {
+    color: gray;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav ul {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+@media(max-width: 1100px) {
+    #plans {
+        visibility: hidden;
+    }
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #personal,
+    #professional,
+    #enterprise {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        height: 35rem;
+        background-position: center;
+        border-radius: 0%;
+    }
+    #personal-inner,
+    #professional-inner,
+    #enterprise-inner {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        border-radius: 0%;
+        box-shadow: 0;
+    }
+    #personal-inner button,
+    #professional-inner button,
+    #enterprise-inner button {
+        width: 35%;
+    }
+}
